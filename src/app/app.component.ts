@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
 })
 
 export class AppComponent {
-  title = 'Livro Angular 2 - Título no app.component.ts';
+  title = 'Livro Angular 2';
   foto: string = 'favicon.ico';
 
  

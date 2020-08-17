@@ -1,20 +1,28 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
+import {HttpClientModule} from '@angular/common/http'
+import {HttpClient} from '@angular/common/http'
 
-import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { ListaPessoaComponent } from './lista-pessoa/lista-pessoa.component';
+import { DadosUsuarioComponent } from './dados-usuario/dados-usuario.component';
+import { ListaUsuarioComponent } from './lista-usuario/lista-usuario.component';
+import { DetalheUsuarioComponent } from './detalhe-usuario/detalhe-usuario.component';
+import { ContatosDataBaseService } from './servicos/contatos-data-base.service';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ListaPessoaComponent,
+    DadosUsuarioComponent,
+    ListaUsuarioComponent,
+    DetalheUsuarioComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    FormsModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [ContatosDataBaseService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
